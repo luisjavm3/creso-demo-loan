@@ -44,4 +44,14 @@ public class LoanRepositoryDemoImpl implements LoanRepository {
                 .toList();
     }
 
+    @Override
+    public void deleteLoan(long id) {
+        Loan loan = loans.stream()
+                .filter(l -> l.getId() == id)
+                .findFirst()
+                .orElse(null);
+
+        loans.remove(loan);
+    }
+
 }

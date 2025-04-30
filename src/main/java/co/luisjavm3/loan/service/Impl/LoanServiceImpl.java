@@ -1,5 +1,6 @@
 package co.luisjavm3.loan.service.Impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
@@ -29,6 +30,18 @@ public class LoanServiceImpl implements LoanService {
     public Optional<LoanDto> findById(long id) {
         return repository.findById(id)
                 .map(l -> mapper.map(l, LoanDto.class));
+    }
+
+    @Override
+    public List<LoanDto> findByBorrorerId(long borrowerId) {
+        return repository.findByBorrorerId(borrowerId).stream()
+                .map(l -> mapper.map(l, LoanDto.class))
+                .toList();
+    }
+
+    @Override
+    public void removeLoan(long id) {
+        repository.deleteLoan(id);
     }
 
 }

@@ -11,4 +11,6 @@ public interface LoanRepository {
     Optional<Loan> findById(long id);
 
     List<Loan> findByBorrorerId(long borrorerId);
+
+    void deleteLoan(long id);
 }
