@@ -15,7 +15,6 @@ public class LoanRepositoryDemoImpl implements LoanRepository {
 
     static {
         loans = new ArrayList<>();
-        loans.add(new Loan(1l, 1l, 10.0d, 1.2d, 12));
     }
 
     @Override
@@ -23,7 +22,7 @@ public class LoanRepositoryDemoImpl implements LoanRepository {
         long newIndex = loans.stream()
                 .map(Loan::getId)
                 .max(Long::compareTo)
-                .orElse(1l);
+                .orElse(0l);
 
         loan.setId(newIndex + 1);
         loans.add(loan);

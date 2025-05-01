@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "creso.demo.borrower-service.url",
+      "type": "java.lang.String",
+      "description": "A description for 'creso.demo.borrower-service.url'"
+    }
+  ]
+}
