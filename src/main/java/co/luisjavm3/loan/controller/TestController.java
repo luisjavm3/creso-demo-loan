@@ -11,4 +11,13 @@ public class TestController {
     public String test() {
         return "Loan Service - OK - v1";
     }
+
+    @GetMapping("/loop")
+    public String test1() {
+        for (int i = 0; i < 1000; i++) {
+
+        }
+
+        return "Loan Service : Loop OK";
+    }
 }
