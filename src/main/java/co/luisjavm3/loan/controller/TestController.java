@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping
     public String test() {
-        return "Loan Service - OK - v1";
+        return "Loan Service - OK - v5";
     }
 
     @GetMapping("/loop")
