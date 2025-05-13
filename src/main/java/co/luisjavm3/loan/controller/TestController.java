@@ -21,7 +21,7 @@ public class TestController {
 
     @GetMapping("/version")
     public String version() {
-        return "Loan Service : v1";
+        return "Loan Service : v1.1";
     }
 
     @GetMapping("/instance-id")
